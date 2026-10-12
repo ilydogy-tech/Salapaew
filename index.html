@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f9e8ee">
+  <title>salapaew ♡ little online shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Itim&family=Playfair+Display:ital,wght@1,600&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="top-ribbon">୨୧  little things, picked with love  ୨୧</div>
+  <header class="site-header">
+    <a class="brand" href="#"><span class="brand-bow">୨୧</span><span>salapaew</span><small>♡ digital goods & game items ♡</small></a>
+    <nav><a href="#shop">SHOP</a><a href="#howto">HOW TO ORDER</a><button id="cart-open" class="pill-button">♡ BAG <b id="cart-count">0</b></button></nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-sticker">♡ welcome<br>to my shop ♡</div>
+      <p class="eyebrow">A TINY PLACE FOR YOUR WISHES</p>
+      <h1>little treats,<br><em>big happiness.</em></h1>
+      <p class="hero-copy">ไอเทมเกมและบริการดิจิทัล คัดมาให้ด้วยความรัก<br>เลือกของที่ชอบ แล้วฝากออเดอร์ไว้กับเราได้เลยนะคะ</p>
+      <a class="primary-button" href="#shop">เลือกชมสินค้า <span>↗</span></a>
+      <div class="hero-doodle doodle-one">♡</div><div class="hero-doodle doodle-two">✧</div>
+    </section>
+
+    <section id="shop" class="section">
+      <div class="section-heading"><div><p class="eyebrow">THE LITTLE MARKET</p><h2>our lovely items <span>♡</span></h2></div><span class="tiny-note">find your favorite!</span></div>
+      <div class="filter-row"><button class="filter active" data-filter="all">ทั้งหมด</button><button class="filter" data-filter="game">ไอเทมเกม</button><button class="filter" data-filter="digital">บริการดิจิทัล</button></div>
+      <div id="product-grid" class="product-grid"></div>
+    </section>
+
+    <section id="howto" class="howto section">
+      <div class="section-heading"><div><p class="eyebrow">A LITTLE GUIDE</p><h2>how to order <span>♡</span></h2></div></div>
+      <div class="steps"><article><b>01</b><h3>เลือกสินค้า</h3><p>กดเพิ่มสินค้าที่ต้องการลงถุงช้อปปิ้ง</p></article><article><b>02</b><h3>ส่งคำสั่งซื้อ</h3><p>กรอกข้อมูลติดต่อและตรวจสอบยอดรวม</p></article><article><b>03</b><h3>โอนและแนบสลิป</h3><p>ส่งสลิปให้ร้านตรวจสอบ ก่อนเริ่มให้บริการ</p></article></div>
+      <p class="notice">♡ เลขออเดอร์จะถูกสร้างจากฐานข้อมูลเมื่อเชื่อมระบบจริงแล้ว รูปแบบ SLP0001, SLP0002…</p>
+    </section>
+  </main>
+  <footer><div class="footer-bow">୨୧</div><b>salapaew</b><p>made with love, just for you ♡</p><a href="admin.html">staff room ↗</a></footer>
+
+  <div id="cart-modal" class="modal" aria-hidden="true"><div class="modal-card"><button class="close" id="cart-close" aria-label="close">×</button><p class="eyebrow">YOUR LITTLE BAG</p><h2>shopping bag ♡</h2><div id="cart-items"></div><div class="total-line"><span>รวมทั้งหมด</span><strong id="cart-total">฿0</strong></div>
+    <form id="checkout-form"><label>ชื่อที่ใช้ติดต่อ<input name="customer_name" required maxlength="80" placeholder="ชื่อของคุณ"></label><label>ช่องทางติดต่อ<input name="contact" required maxlength="120" placeholder="LINE / Facebook / อื่น ๆ"></label><label>รายละเอียดเพิ่มเติม (ถ้ามี)<textarea name="note" maxlength="500" placeholder="ไอดีเกมหรือรายละเอียดที่จำเป็น"></textarea></label><button class="primary-button full" type="submit">ส่งคำสั่งซื้อ ♡</button><p class="form-hint">เดโมนี้ยังไม่ส่งข้อมูลไปฐานข้อมูล จนกว่าจะตั้งค่า Supabase ตาม README</p></form>
+  </div></div>
+  <div id="success-modal" class="modal" aria-hidden="true"><div class="modal-card success-card"><div class="success-bow">୨୧</div><p class="eyebrow">ORDER RECEIVED</p><h2>ขอบคุณที่อุดหนุนค่ะ ♡</h2><p>ออเดอร์ของคุณถูกบันทึกแล้ว</p><div class="order-number" id="success-order">SLP0001</div><p class="small">เก็บเลขออเดอร์นี้ไว้ใช้ติดตามรายการนะคะ</p><button id="success-close" class="primary-button">กลับไปเลือกชมสินค้า</button></div></div>
+  <script src="app.js"></script>
+</body></html>
